@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PashuMitra — Cattle Breed & Health AI</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Persistent Left Sidebar -->
+    <aside class="sidebar" aria-label="Primary Sidebar Navigation">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">🌿</span>
+        <div>
+          <div class="brand-name">PashuMitra</div>
+          <div class="brand-tag">CATTLE & HEALTH AI</div>
+        </div>
+      </div>
+
+      <nav class="nav-list" role="tablist" aria-orientation="vertical">
+        <button type="button" class="nav-item active" data-page="home">
+          <span aria-hidden="true">🏠</span>
+          <span>Home</span>
+        </button>
+        <button type="button" class="nav-item" data-page="classifier">
+          <span aria-hidden="true">🔬</span>
+          <span>Breed Classifier</span>
+        </button>
+        <button type="button" class="nav-item" data-page="health">
+          <span aria-hidden="true">🩺</span>
+          <span>Health Advisor</span>
+        </button>
+        <button type="button" class="nav-item" data-page="explorer">
+          <span aria-hidden="true">🗂️</span>
+          <span>Breed Explorer</span>
+        </button>
+        <button type="button" class="nav-item" data-page="about">
+          <span aria-hidden="true">ℹ️</span>
+          <span>About</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="version">PashuMitra v1.2</div>
+        <p>AI-powered cattle breed & health advisory platform for Indian indigenous breeds.</p>
+      </div>
+    </aside>
+
+    <!-- Main Dynamic Viewport -->
+    <div class="main-wrapper">
+      <main class="content">
+
+        <!-- ================= 1. HOME PAGE ================= -->
+        <section id="page-home" class="page-view active" aria-labelledby="hero-heading">
+          <div class="hero">
+            <div class="eyebrow">🌿 AI-POWERED LIVESTOCK INTELLIGENCE</div>
+
+            <h1 id="hero-heading">
+              Meet <span class="accent-green">PashuMitra</span> —<br />
+              Your Cattle's <span class="accent-amber">Digital Companion</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Identify 40+ indigenous Indian cattle and buffalo breeds instantly with
+              AI, and get expert health guidance across 12+ livestock diseases — all from a
+              single photo or symptom checklist.
+            </p>
+
+            <div class="cta-group">
+              <button type="button" class="btn btn-primary" data-goto="classifier">
+                <span aria-hidden="true">🔬</span> Classify Breed
+              </button>
+              <button type="button" class="btn btn-secondary" data-goto="health">
+                <span aria-hidden="true">🩺</span> Check Animal Health
+              </button>
+            </div>
+
+            <dl class="stats-row" aria-label="Platform key metrics">
+              <div class="stat-item">
+                <dt>BREEDS COVERED</dt>
+                <dd>40+</dd>
+              </div>
+              <div class="stat-item">
+                <dt>DISEASE PROFILES</dt>
+                <dd>12+</dd>
+              </div>
+              <div class="stat-item">
+                <dt>MODEL ACCURACY</dt>
+                <dd>78.4%</dd>
+              </div>
+              <div class="stat-item">
+                <dt>POWERED</dt>
+                <dd>AI</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="features-section">
+            <div class="section-header">
+              <h2>Everything You Need</h2>
+              <p>Comprehensive tools for livestock management, built for Indian farmers and veterinarians.</p>
+            </div>
+
+            <div class="grid-3">
+              <article class="card card-center">
+                <div class="card-icon-lg" aria-hidden="true">📷</div>
+                <h3>Photo-Based Breed ID</h3>
+                <p>Upload a photo, use your camera, or paste a URL. Get instant breed identification across 40+ breeds with confidence scores.</p>
+              </article>
+
+              <article class="card card-center">
+                <div class="card-icon-lg" aria-hidden="true">🩺</div>
+                <h3>Health Advisor</h3>
+                <p>Select visible symptoms from a checklist covering 12+ cattle and buffalo diseases to get treatment recommendations and prevention tips.</p>
+              </article>
+
+              <article class="card card-center">
+                <div class="card-icon-lg" aria-hidden="true">🔍</div>
+                <h3>Visual Disease Detection</h3>
+                <p>Upload a photo showing symptoms — AI detects signs of Foot-and-Mouth Disease, Lumpy Skin Disease, Mastitis, and more.</p>
+              </article>
+
+              <article class="card card-center">
+                <div class="card-icon-lg" aria-hidden="true">🧠</div>
+                <h3>Deep Learning Models</h3>
+                <p>Trained ResNet-50 and Vision Transformer models achieving 78.4% validation/test accuracy across indigenous breeds.</p>
+              </article>
+
+              <article class="card card-center">
+                <div class="card-icon-lg" aria-hidden="true">📋</div>
+                <h3>Detailed Breed Profiles</h3>
+                <p>Explore milk yield, lifespan, primary use, regional origin, horn/coat traits, and care notes for 40 indigenous breeds.</p>
+              </article>
+
+              <article class="card card-center">
+                <div class="card-icon-lg" aria-hidden="true">🌿</div>
+                <h3>Farmer-First Design</h3>
+                <p>Intuitive interface designed for real-world field use. Works on any device with a browser — no installation needed.</p>
+              </article>
+            </div>
+
+            <div class="alert-banner">
+              <div>
+                <h3><span aria-hidden="true">🩺</span> Is Your Animal Sick?</h3>
+                <p>Select symptoms you observe across 12+ disease profiles and get an instant advisory with treatment guidance.</p>
+              </div>
+              <button type="button" class="btn btn-amber" data-goto="health">Open Health Advisor →</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= 2. BREED CLASSIFIER PAGE ================= -->
+        <section id="page-classifier" class="page-view" aria-labelledby="classifier-heading">
+          <div class="page-header">
+            <h1 id="classifier-heading">Predict Breed</h1>
+            <p>Upload an image, use your camera, or paste a URL to identify the breed.</p>
+          </div>
+
+          <div class="split-layout">
+            <div class="card">
+              <div class="mode-tabs" role="tablist">
+                <button type="button" class="mode-tab active" data-input-mode="upload">📁 Upload</button>
+                <button type="button" class="mode-tab" data-input-mode="camera">📷 Camera</button>
+                <button type="button" class="mode-tab" data-input-mode="url">🔗 URL</button>
+              </div>
+
+              <div id="mode-upload" class="input-panel active">
+                <label class="dropzone" for="breed-file-input">
+                  <input type="file" id="breed-file-input" accept="image/jpeg,image/png,image/webp" hidden />
+                  <div id="upload-preview-wrap" class="dropzone-inner">
+                    <span class="drop-icon" aria-hidden="true">📥</span>
+                    <strong>Click to upload or drag & drop</strong>
+                    <span>JPG, PNG, WebP — max 10MB</span>
+                  </div>
+                </label>
+              </div>
+
+              <div id="mode-camera" class="input-panel">
+                <div class="dropzone camera-box" id="camera-trigger" role="button" tabindex="0">
+                  <video id="camera-stream" autoplay playsinline hidden></video>
+                  <div id="camera-placeholder" class="dropzone-inner">
+                    <span class="drop-icon" aria-hidden="true">📷</span>
+                    <strong>Click to open camera</strong>
+                    <span>Allow camera access when prompted</span>
+                  </div>
+                </div>
+              </div>
+
+              <div id="mode-url" class="input-panel">
+                <div class="url-box">
+                  <label for="breed-url-input">Image URL</label>
+                  <input type="url" id="breed-url-input" placeholder="https://example.com/cow-image.jpg" />
+                </div>
+              </div>
+
+              <button type="button" id="run-classify-btn" class="btn btn-primary btn-full">
+                🔍 Classify Breed
+              </button>
+
+              <div id="classify-result" class="result-box" hidden></div>
+
+              <div class="tips-box">
+                <h4>📸 Tips for Better Results</h4>
+                <ul>
+                  <li>Use a clear side-view photo of the animal</li>
+                  <li>Ensure good lighting and minimal background clutter</li>
+                  <li>Show the full body including head and horns</li>
+                  <li>Avoid photos with multiple animals</li>
+                </ul>
+              </div>
+            </div>
+
+            <aside class="card side-card">
+              <h3>Recent Predictions</h3>
+              <ul id="recent-predictions-list" class="recent-list">
+                <li>
+                  <span>Jaffrabadi Buffalo</span>
+                  <span class="muted">95.6% · 11/21/2026</span>
+                </li>
+                <li>
+                  <span>Gir Cow</span>
+                  <span class="muted">88.4% · 11/21/2026</span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ================= 3. HEALTH ADVISOR PAGE ================= -->
+        <section id="page-health" class="page-view" aria-labelledby="health-heading">
+          <div class="page-header">
+            <h1 id="health-heading"><span aria-hidden="true">🩺</span> Health Advisor</h1>
+            <p>Identify potential cattle and buffalo diseases across 12+ profiles using symptom analysis or photo detection.</p>
+          </div>
+
+          <div class="health-tabs">
+            <button type="button" class="health-tab active" data-health-mode="symptoms">📋 Symptom Checker</button>
+            <button type="button" class="health-tab" data-health-mode="visual">📷 Visual Check (Photo)</button>
+          </div>
+
+          <div class="split-layout health-grid">
+            <div class="card">
+              <div id="health-mode-symptoms" class="health-panel active">
+                <h3>Select Observed Symptoms</h3>
+                <p class="sub-note">Check all symptoms you observe in the animal. More symptoms = more accurate results.</p>
+                <div class="selected-counter"><span id="symptom-count">0</span> symptoms selected</div>
+
+                <div id="symptom-checklist" class="symptom-grid"></div>
+
+                <button type="button" id="analyze-symptoms-btn" class="btn btn-amber btn-full">
+                  🔍 Analyze Symptoms
+                </button>
+              </div>
+
+              <div id="health-mode-visual" class="health-panel">
+                <h3>Visual Disease Detection</h3>
+                <p class="sub-note">Upload a close-up photo of visible skin lesions, blisters, or udder swelling.</p>
+                <label class="dropzone" for="disease-file-input">
+                  <input type="file" id="disease-file-input" accept="image/*" hidden />
+                  <div class="dropzone-inner">
+                    <span class="drop-icon" aria-hidden="true">📷</span>
+                    <strong>Upload symptom photo</strong>
+                    <span>Detects Foot-and-Mouth, Lumpy Skin, Mastitis, or Healthy status</span>
+                  </div>
+                </label>
+                <button type="button" id="analyze-photo-btn" class="btn btn-amber btn-full">
+                  🔍 Analyze Photo
+                </button>
+              </div>
+            </div>
+
+            <div class="card diagnosis-panel" id="health-result-panel">
+              <div class="empty-state">
+                <div class="stethoscope-lg" aria-hidden="true">🩺</div>
+                <h3>Health Advisor Ready</h3>
+                <p>Select symptoms from the checklist (12+ disease profiles supported) and click "Analyze Symptoms" to get disease predictions with treatment guidance.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= 4. BREED EXPLORER PAGE ================= -->
+        <section id="page-explorer" class="page-view" aria-labelledby="explorer-heading">
+          <div class="page-header">
+            <h1 id="explorer-heading">Breed Explorer</h1>
+            <p>Browse 40 indigenous Indian cattle and buffalo breeds and inspect full breed details.</p>
+          </div>
+
+          <div class="filter-bar">
+            <div class="search-wrap">
+              <span aria-hidden="true">🔍</span>
+              <input type="search" id="breed-search" placeholder="Search breeds, regions, or uses..." aria-label="Search breeds" />
+            </div>
+            <select id="breed-type-filter" aria-label="Filter by animal type">
+              <option value="all">All Types (40)</option>
+              <option value="cow">Cow (28)</option>
+              <option value="buffalo">Buffalo (12)</option>
+            </select>
+          </div>
+
+          <div class="results-meta" id="breed-count-label">Showing 40 of 40 breeds</div>
+          <div id="breed-cards-grid" class="grid-3"></div>
+
+          <!-- Breed Detail Modal -->
+          <div id="breed-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="modal-breed-title">
+            <div class="modal-card">
+              <div class="modal-head">
+                <div>
+                  <span id="modal-breed-badge" class="badge badge-cow">COW</span>
+                  <h3 id="modal-breed-title" style="margin-top:0.4rem;">Breed Name</h3>
+                </div>
+                <button type="button" id="close-modal-btn" class="btn btn-secondary" aria-label="Close breed details">✕</button>
+              </div>
+              <dl id="modal-breed-specs" class="breed-specs"></dl>
+              <div class="modal-detail-block">
+                <h4>Physical & Management Notes</h4>
+                <p id="modal-breed-notes"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= 5. ABOUT PAGE ================= -->
+        <section id="page-about" class="page-view" aria-labelledby="about-heading">
+          <div class="page-header">
+            <h1 id="about-heading">About PashuMitra</h1>
+            <p>An AI-powered platform for cattle breed identification and livestock health advisory, built for Indian farmers and veterinary practitioners.</p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card about-card">
+              <h3>🌿 Project Overview</h3>
+              <p>
+                PashuMitra combines computer vision and livestock health knowledge to help identify 40+ indigenous Indian cattle and buffalo breeds and assist with 12+ common livestock diseases.
+              </p>
+              <p>
+                Built to give farmers, students, and field workers fast access to breed profiles, symptom checklists, and care guidance.
+              </p>
+            </article>
+
+            <article class="card about-card">
+              <h3>🧠 Breed Classification Models</h3>
+              <p>Four deep learning architectures were trained and compared (78.4% top accuracy):</p>
+              <ul class="arrow-list">
+                <li><strong>MLP Baseline</strong> — flatten + dense layers</li>
+                <li><strong>CNN from Scratch</strong> — 5 convolutional blocks + GAP</li>
+                <li><strong>ResNet-50 Transfer Learning</strong> — ImageNet pretrained</li>
+                <li><strong>ViT-B/16 Transfer Learning</strong> — Vision Transformer</li>
+              </ul>
+            </article>
+
+            <article class="card about-card">
+              <h3>📊 Datasets & Health Coverage</h3>
+              <p><strong>Breed Catalog:</strong> 40 indigenous Indian breeds (28 cattle + 12 buffalo breeds) with regional origin, yield, lifespan, and traits.</p>
+              <p><strong>Disease Profiles (12+):</strong> FMD, Lumpy Skin Disease, Clinical Mastitis, Tick Fever (Babesiosis & Theileriosis), HS, Black Quarter, BRD, Brucellosis, Milk Fever, Bloat, and Anthrax.</p>
+            </article>
+
+            <article class="card about-card">
+              <h3>🩺 Health Advisor Feature</h3>
+              <p>The disease advisory module includes:</p>
+              <ul class="arrow-list">
+                <li>Symptom-based checklist matching 12+ cattle & buffalo diseases</li>
+                <li>Full disease profiles with causes, treatment, and prevention</li>
+                <li>Visual AI detection from uploaded animal photos</li>
+                <li>Vaccination and biosecurity reminders</li>
+              </ul>
+            </article>
+
+            <article class="card about-card">
+              <h3>⚙️ Tech Stack</h3>
+              <ul class="arrow-list">
+                <li>PyTorch 2.x + torchvision + timm</li>
+                <li>FastAPI backend with Pydantic schemas</li>
+                <li>Responsive HTML5, CSS3 & JavaScript frontend</li>
+                <li>Rule-based + ML disease advisory engine</li>
+              </ul>
+            </article>
+
+            <article class="card about-card">
+              <h3>⚠️ Disclaimer</h3>
+              <p>
+                PashuMitra is an educational and informational tool; breed and health outputs do not replace veterinary examination.
+              </p>
+              <p>
+                Always consult a qualified veterinarian for medical diagnosis, prescriptions, and emergency treatment decisions.
+              </p>
+            </article>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <p>🌿 PashuMitra — AI-powered Cattle Breed & Health Platform · Powered by PyTorch & FastAPI · 2026</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
